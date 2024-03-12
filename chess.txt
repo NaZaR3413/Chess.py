@@ -1,8 +1,6 @@
 % Nilay Patel
 % Eyasu Abebe
 % Michael Mayers
-% 1221528776
-% CSE259 Project 2
 
 % PVR 20/07/92: Added entry declaration for move/5 (it is used in a bagof).
 
@@ -60,9 +58,7 @@ main :-
 main.
 
 % ------------------------------------------------------------------------------
-% YOUR CODE STARTS HERE
 
-% TASK 3: MODIFY THE CODE BELOW TO MAKE playerA and playerB auto-compete.
 play(Board) :-
 %   removed the prompt to get command, switched to automated chess
     execute_command(playerA, Board, NewBoard),
@@ -77,7 +73,6 @@ execute_command(X, Board, _) :-     % Use to catch unexpected situations
     halt(0).
 
 % ------------------------------------------------------------------------------
-% YOUR CODE ENDS HERE
 
 % ------------------------------------------------------------------------------
 % Parameters
@@ -93,10 +88,8 @@ Rand is Number.               % Add random value to avoid deadlock
 %---------------------------------------------------------------
 
 % ------------------------------------------------------------------------------
-% YOUR CODE STARTS HERE
 % +++++++++++++++++++++++++++++++++ playerA Code +++++++++++++++++++++++++++++++
 
-% TASK 2: IMPLEMENT playerA CODE HERE
 
 % Strength assesses utility of the current game state for player based on its Color
 % Color will be black for playerB; OppositeColor is playerA (white)
@@ -170,7 +163,6 @@ collect_movesA(Board, Color, Moves) :-
 
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % ------------------------------------------------------------------------------
-% YOUR CODE ENDS HERE
 
 %----------------------- DO NOT OVERRIDE -----------------------
 strengthB([], _, _, Rand) :- noise_level(Level), random(0, Level, Number),
@@ -424,9 +416,6 @@ report_move(Color, Board, From_File-From_Rank, To_File-To_Rank, Rating) :-
 
 
 % ------------------------------------------------------------------------------
-% YOUR CODE STARTS HERE
-
-% TASK 1: REPLACE THE print_board PREDICATE BELOW WITH YOUR CODE
 print_board(Board) :-
 	write(Board), nl.
 % print_board not used, adjusted to take advantage of recitation help
@@ -504,7 +493,6 @@ pair(night,n).
 
 
 % ------------------------------------------------------------------------------
-% YOUR CODE ENDS HERE
 
 
 % ------------------------------------------------------------------------------
